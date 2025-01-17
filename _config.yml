@@ -3,18 +3,18 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
-description: ''
-keywords:
-author: John Doe
-language: en
-timezone: ''
+title: Rod Chang's Blog
+subtitle: '紀錄技術與生活'
+description: '這是我的個人技術部落格，專注於全端的開發相關內容。'
+keywords: 'Rod Chang, 開發, 技術, 生活, 程式, 網頁, 前端, 後端, 全端'
+author: 'Rod Chang'
+language: zh-TW
+timezone: Asia/Taipei
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://rodchang12.github.io/rodchang.github.io/
-permalink: :year/:month/:day/:title/
+permalink: posts/:title/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
