@@ -217,7 +217,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2025-01-24 14:51:08" itemprop="dateModified" datetime="2025-01-24T14:51:08+08:00">2025-01-24</time>
+      <time title="修改時間：2025-01-28 15:12:36" itemprop="dateModified" datetime="2025-01-28T15:12:36+08:00">2025-01-28</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -239,111 +239,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="1-關於建立部落格"><a href="#1-關於建立部落格" class="headerlink" title="1. 關於建立部落格"></a>1. 關於建立部落格</h2><p>在2024年開始接觸前端技術，在實體與線上課程的學習中設立了不同的目標去挑戰，並使用了 Notion 跟 HackMD 作學習筆記，經過這段時間的累積，建立自己的部落格來存放自己的筆記是更好的選項，而在眾多的平台選擇了 Hexo。</p>
-<p>Hexo 是一個基於 Node.js 的靜態部落格框架，由於 Hexo 是使用指令來做開發，並在配合 GitHub Pages 進行部屬，可以同時練習指令與 GitHub 版本控制。</p>
-<p>Hexo 是使用 MarkDown 撰寫格式，同時也須熟悉 Git 指令與 npm 的知識，可以參考下方連結教學。</p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://hackmd.io/@eMP9zQQ0Qt6I8Uqp2Vqy6w/SyiOheL5N/%2FBVqowKshRH246Q7UDyodFA">MarkDown 語法大全</a></li>
-<li><a target="_blank" rel="noopener" href="https://gitbook.tw/">Git 教學 - 為你自己學 Git</a></li>
-<li><a target="_blank" rel="noopener" href="https://seanacnet.com/npm/npm-common-commands/">npm 基本常用指令</a></li>
-</ul>
-<h2 id="2-環境準備"><a href="#2-環境準備" class="headerlink" title="2. 環境準備"></a>2. 環境準備</h2><h3 id="2-1-安裝必要工具"><a href="#2-1-安裝必要工具" class="headerlink" title="2.1 安裝必要工具"></a>2.1 安裝必要工具</h3><p>在開始之前，請確保你的電腦已安裝以下工具：</p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://nodejs.org/en/">Nodejs</a> : 建議使用最新的 LTS 版本</li>
-<li><a target="_blank" rel="noopener" href="https://git-scm.com/">Git</a> : 版本控制</li>
-<li><a target="_blank" rel="noopener" href="https://github.com/">GitHub 帳號</a> : 用於存放部落格原始碼與靜態頁面</li>
-<li><a target="_blank" rel="noopener" href="https://code.visualstudio.com/">Visual Studio Code</a> : 編輯器，也可以用自己習慣的 IDE 來編輯。</li>
-</ul>
-<p><strong>本文版本環境</strong></p>
-<ul>
-<li>作業系統： Windows10 X64</li>
-<li>Nodejs:：v20.18.2 LTS</li>
-<li>IDE：VS Code</li>
-</ul>
-<p><strong>Hexo 版本</strong></p>
-<ul>
-<li>hexo: 7.3.0</li>
-<li>hexo-cli: 4.3.2</li>
-</ul>
-<h3 id="2-2-檢查安裝"><a href="#2-2-檢查安裝" class="headerlink" title="2.2 檢查安裝"></a>2.2 檢查安裝</h3><p>可以使用輸入以下指令在終端機確認是否安裝成功：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v   <span class="comment"># 確認 Node.js 版本</span></span><br><span class="line">git --version  <span class="comment"># 確認 Git 版本</span></span><br></pre></td></tr></table></figure>
-
-<p>確認上述兩個工具安裝好後，接下來就可以開始安裝Hexo了。</p>
-<h2 id="3-安裝與初始化-Hexo"><a href="#3-安裝與初始化-Hexo" class="headerlink" title="3. 安裝與初始化 Hexo"></a>3. 安裝與初始化 Hexo</h2><h3 id="3-1-安裝-Hexo-CLI"><a href="#3-1-安裝-Hexo-CLI" class="headerlink" title="3.1 安裝 Hexo CLI"></a>3.1 安裝 Hexo CLI</h3><p>依照 <a target="_blank" rel="noopener" href="https://hexo.io/zh-tw/docs/#%E5%AE%89%E8%A3%9D">Hexo官方文件</a> 指示，在終端機中執行以下指令 : </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-2-初始化-Hexo-專案"><a href="#3-2-初始化-Hexo-專案" class="headerlink" title="3.2 初始化 Hexo 專案"></a>3.2 初始化 Hexo 專案</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init my-blog <span class="comment"># 建立 my-blog 資料夾</span></span><br><span class="line"><span class="built_in">cd</span> my-blog <span class="comment"># 切換到專案資料夾</span></span><br><span class="line">npm install <span class="comment"># 下載所需要的套件</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="3-3-啟動本地伺服器"><a href="#3-3-啟動本地伺服器" class="headerlink" title="3.3 啟動本地伺服器"></a>3.3 啟動本地伺服器</h3><p>在本地啟動 Hexo 的伺服器 :</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-
-<p>打開瀏覽器在網址輸入 <code>http://localhost:4000</code>，就會看到Hexo出現在瀏覽器上囉。</p>
-<h2 id="4-GitHub-Page-準備事項"><a href="#4-GitHub-Page-準備事項" class="headerlink" title="4. GitHub Page 準備事項"></a>4. GitHub Page 準備事項</h2><h3 id="4-1-設定-GitHub-儲存庫-repository"><a href="#4-1-設定-GitHub-儲存庫-repository" class="headerlink" title="4.1 設定 GitHub 儲存庫 ( repository )"></a>4.1 設定 GitHub 儲存庫 ( repository )</h3><ol>
-<li>在 GitHub 建立一個新的儲存庫( repository ) ，建議使用 <code>&lt;github-username&gt;.github.io</code><br>例如 : <code>Rodchang12.github.io</code><br>![image]<a target="_blank" rel="noopener" href="https://hackmd-prod-images.s3-ap-northeast-1.amazonaws.com/uploads/upload_a926b67c2a505571d9ed660213a62c06.png?AWSAccessKeyId=AKIA3XSAAW6AWSKNINWO&Expires=1737701747&Signature=BIG7xx87lgLt+B3DMMTZiQ4jh3M=">https://hackmd-prod-images.s3-ap-northeast-1.amazonaws.com/uploads/upload_a926b67c2a505571d9ed660213a62c06.png?AWSAccessKeyId=AKIA3XSAAW6AWSKNINWO&amp;Expires=1737701747&amp;Signature=BIG7xx87lgLt%2BB3DMMTZiQ4jh3M%3D</a>)</li>
-</ol>
-<ul>
-<li>名稱可以設立自己的使用者名稱或是暱稱，記得 <code>.github.io</code> 要加上去。</li>
-<li>權限設定為 <code>Public</code> (公開)。</li>
-<li>其他不用更動，按下綠色按鈕( Create repository )即可建立。</li>
-</ul>
-<ol start="2">
-<li>複製 GitHub Repository 的連結<br><img src="https://hackmd.io/_uploads/Sy2BqjedJl.png" alt="image"></li>
-</ol>
-<h3 id="4-2-在-Hexo-專案資料夾中設定"><a href="#4-2-在-Hexo-專案資料夾中設定" class="headerlink" title="4.2 在 Hexo 專案資料夾中設定"></a>4.2 在 Hexo 專案資料夾中設定</h3><ol>
-<li><code>._config.yml</code> 設定爲以下調整 :</li>
-</ol>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/one-command-deployment</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">前面複製的</span> <span class="string">Github</span> <span class="string">Repository</span> <span class="string">網址</span> </span><br><span class="line"> <span class="comment">#repo: https://github.com/usuename/username.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span> <span class="comment"># 預設分支名稱</span></span><br><span class="line">  <span class="attr">message:</span></span><br></pre></td></tr></table></figure>
-<p>參考 : <a target="_blank" rel="noopener" href="https://hexo.io/zh-tw/docs/one-command-deployment#Git">Hexo官方文件</a></p>
-<ol start="2">
-<li>安裝<a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-deployer-git">部署外掛</a> :</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>將 Hexo 產生的網站內容上傳到 GitHub :</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>4.重新整理 Github 的 repository ，確認是否上傳內容成功 </p>
-<ul>
-<li>進入右側的 <code>Deployments</code> :<br><img src="https://hackmd.io/_uploads/r1B5k2lO1l.png" alt="image"></li>
-<li>輸入上面的網址或點擊連結 :<br><img src="https://hackmd.io/_uploads/HkCDg2gu1l.png" alt="image"></li>
-<li>就可以看到 Hexo 的網站順利地架在 Github 的 Page 上囉，預設主題會是 <code>Landscape</code><br><img src="https://hackmd.io/_uploads/SyLB-hgd1x.png" alt="image"></li>
-</ul>
-<h2 id="5-撰寫與管理文章"><a href="#5-撰寫與管理文章" class="headerlink" title="5. 撰寫與管理文章"></a>5. 撰寫與管理文章</h2><h3 id="5-1-建立新文章"><a href="#5-1-建立新文章" class="headerlink" title="5.1 建立新文章"></a>5.1 建立新文章</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">&quot;第一篇文章&quot;</span></span><br></pre></td></tr></table></figure>
-<p>而文章會新增在目錄的 <code>source/_posts/&lt;文章名稱&gt;.md</code>。<br>附檔名為 <code>.md</code>，開啟檔案會發現這是一個「Markdown」檔。</p>
-<h3 id="5-2-文章格式"><a href="#5-2-文章格式" class="headerlink" title="5.2 文章格式"></a>5.2 文章格式</h3><ul>
-<li>開頭基本資訊 :</li>
-</ul>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">我的第一篇文章</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2025-01-24 12:00:00</span></span><br><span class="line"><span class="attr">categories:</span> </span><br><span class="line">    <span class="bullet">-</span> <span class="string">技術筆記</span></span><br><span class="line"><span class="attr">tags:</span> </span><br><span class="line">    <span class="bullet">-</span> <span class="string">Hexo</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">Blog</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>文章內容 :</li>
-</ul>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## 標題</span></span><br><span class="line"><span class="string">第一行文字...</span></span><br><span class="line"><span class="string">第二行...</span></span><br><span class="line"></span><br><span class="line"><span class="comment">### 次標題</span></span><br><span class="line"><span class="string">插入圖片</span></span><br><span class="line"><span class="type">![</span><span class="string">圖片說明](image.png)</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>更多 <code>MarkDown</code> 語法請參考 : <a target="_blank" rel="noopener" href="https://hackmd.io/@eMP9zQQ0Qt6I8Uqp2Vqy6w/SyiOheL5N/%2FBVqowKshRH246Q7UDyodFA">MarkDown 語法大全</a></li>
-</ul>
-<h3 id="5-3-在本地端預覽文章"><a href="#5-3-在本地端預覽文章" class="headerlink" title="5.3 在本地端預覽文章"></a>5.3 在本地端預覽文章</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="6-進階設定"><a href="#6-進階設定" class="headerlink" title="6. 進階設定"></a>6. 進階設定</h2><h3 id="6-1-更換-Hexo-主題"><a href="#6-1-更換-Hexo-主題" class="headerlink" title="6.1 更換 Hexo 主題"></a>6.1 更換 Hexo 主題</h3><p>Hexo 在建立後會有預設主題，可以在 <a target="_blank" rel="noopener" href="https://hexo.io/themes/">Hexo Themes</a> 找到喜歡的主題，並按照說明安裝。<br><img src="https://hackmd.io/_uploads/SJGGNnxOkx.png" alt="image"><br>本文選擇使用<a target="_blank" rel="noopener" href="https://github.com/next-theme/hexo-theme-next">NexT</a>這套主題，接下來所需的步驟是</p>
-<ul>
-<li>安裝 NexT 主題樣式</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-theme-next</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>開啟 <code>._config.yml</code> 檔案，更改 <code>theme</code>設定 :</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: next</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>在本機端啟動 Hexo 伺服器，確認是否套用到 NexT 主題樣式的網站 !</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-
-<h3 id="6-2-設定自訂網域"><a href="#6-2-設定自訂網域" class="headerlink" title="6.2 設定自訂網域"></a>6.2 設定自訂網域</h3><p>其實上述步驟已經足夠讓自己的 Blog 免費地架在網路上了，美中不足的就只是網址就會是呈現 <github_username>.github.io 的格式。<br>如果你有自己的網域，可以在 GitHub Pages 設定 CNAME 來綁定網域名稱。</p>
-
+          <p>建立自己的Hexo 部落格吧 !</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/rodchang.github.io/posts/%E5%BB%BA%E7%AB%8BHexo%E9%83%A8%E8%90%BD%E6%A0%BC%E8%88%87%E4%BD%BF%E7%94%A8GitHub%E9%83%A8%E5%B1%AC/">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
