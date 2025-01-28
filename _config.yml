@@ -55,6 +55,13 @@ prismjs:
   line_number: true
   tab_replace: ''
 
+# Automatically scroll to the header when the page is loaded. 
+auto_excerpt:
+  enable: true
+  length: 50
+  # If true, the excerpt will be displayed in the post.
+  show_in_post: false
+
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
